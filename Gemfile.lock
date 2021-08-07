@@ -1,0 +1,20 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    awesome_print (1.9.2)
+    dotenv (2.7.6)
+    excon (0.85.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  awesome_print
+  dotenv
+  excon
+
+RUBY VERSION
+   ruby 2.6.6p146
+
+BUNDLED WITH
+   1.17.3
