@@ -8,8 +8,11 @@
 /spec/examples.txt
 /test/tmp/
 /test/version_tmp/
+/test/json
 /tmp/
 /json/
+settings.yml
+.irb-save-history
 
 # Used by dotenv library to load environment variables.
 .env

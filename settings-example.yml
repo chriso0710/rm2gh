@@ -1,0 +1,59 @@
+# do not forget to rename this file to settings.yml
+# and replace the placeholders with your values
+# dryrun: true will not create any JSON files or issues/labels on github
+dryrun: true
+redmine:
+  # skip: true will not execute reading from redmine
+  skip: false
+  # redmine url
+  url: https://<host>.<your-domain>.<tld>
+  # redmine api key, please note, that you may need to enable the redmine API in the server settings 
+  api_key: <your-api-key>
+  # redmine project id
+  project_id: <your-project-id>
+  # local directory to store redmine json files
+  json_dir: json
+github:
+  # skip: true will not execute writing to github
+  skip: false
+  # github personal access token
+  token: <your-github-token>
+  # github repository in <user>/<repo> format
+  repo: <your-repo>
+  # default white color for labels in hex format
+  label_defaultcolor: "ffffff"
+  # issue description i18n
+  i18n:
+    comments: "Comments"
+    description: "Discription"
+    author: "Created by"
+    changed: "Changed at"
+    json: "Redmine Original JSON"
+mappings:
+  # keys are case insensitive
+  # redmine status to github open/close. Please note that it is not possible to set a close reason.
+  status:
+    new: :open
+    resolved: :close
+    rejected: :close
+    "in progress": :open
+    closed: :close
+  # labels get created if they do not exist
+  # tracker to label
+  tracker:
+    bug: "bug"
+    feature: "enhancement"
+    support: "support"
+    "check/question": "support"
+  # priority to label
+  priority:
+    normal: null
+    high: "prio:high"
+    urgent: "prio:urgent"
+    low: "prio:low"
+  # category to label
+  category:
+    payment: "category:payment"
+    frontend: "category:frontend"
+    api: "category:api"
+    system: "category:system"
